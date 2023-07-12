@@ -9,22 +9,18 @@ import SwiftUI
 
 struct Walkthrough: View {
     var body: some View {
-        ZStack {
-        
-            VStack{
-                TabView {
-                    slider_one()
-                    slider_two()
-                }
-                .tabViewStyle(.page)
-                   
+        VStack{
+            TabView {
+                slider_one()
+                slider_two()
             }
-            .frame(width: 350, height: 450)
-            .background(Color.red)
-            .cornerRadius(20)
-            .shadow(color: .black.opacity(0.4), radius: 10, x:0, y: 0)
+            .tabViewStyle(.page)
+            
         }
-        
+        .frame(width: 350, height: 450)
+        .background(Color.red)
+        .cornerRadius(20)
+        .shadow(color: .black.opacity(0.4), radius: 10, x:0, y: 0)
     }
     
     private func slider_one() -> some View {
@@ -43,7 +39,7 @@ struct Walkthrough: View {
                 .multilineTextAlignment(.center)
                 .font(.body)
                 .padding()
-                
+            
         }
     }
     private func slider_two() -> some View {
@@ -62,7 +58,7 @@ struct Walkthrough: View {
                 .multilineTextAlignment(.center)
                 .font(.body)
                 .padding()
-                
+            
         }
     }
 }
