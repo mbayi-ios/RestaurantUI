@@ -12,6 +12,9 @@
 		CDFA7A642A5EE1D300A2E4A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDFA7A632A5EE1D300A2E4A7 /* Assets.xcassets */; };
 		CDFA7A672A5EE1D300A2E4A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDFA7A662A5EE1D300A2E4A7 /* Preview Assets.xcassets */; };
 		CDFA7A6F2A5EE22C00A2E4A7 /* Walkthrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA7A6E2A5EE22C00A2E4A7 /* Walkthrough.swift */; };
+		CDFA7A722A5EF2F500A2E4A7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA7A712A5EF2F500A2E4A7 /* LoginView.swift */; };
+		CDFA7A752A5EF9F100A2E4A7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA7A742A5EF9F100A2E4A7 /* HomeView.swift */; };
+		CDFA7A782A5F08F900A2E4A7 /* HomeHubContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA7A772A5F08F900A2E4A7 /* HomeHubContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		CDFA7A632A5EE1D300A2E4A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDFA7A662A5EE1D300A2E4A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CDFA7A6E2A5EE22C00A2E4A7 /* Walkthrough.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walkthrough.swift; sourceTree = "<group>"; };
+		CDFA7A712A5EF2F500A2E4A7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CDFA7A742A5EF9F100A2E4A7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CDFA7A772A5F08F900A2E4A7 /* HomeHubContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHubContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,8 @@
 		CDFA7A5E2A5EE1D200A2E4A7 /* RestaurantUI */ = {
 			isa = PBXGroup;
 			children = (
+				CDFA7A732A5EF9E800A2E4A7 /* Home */,
+				CDFA7A702A5EF2E200A2E4A7 /* Login */,
 				CDFA7A6D2A5EE21B00A2E4A7 /* Walkthrough */,
 				CDFA7A5F2A5EE1D200A2E4A7 /* RestaurantUIApp.swift */,
 				CDFA7A612A5EE1D200A2E4A7 /* ContentView.swift */,
@@ -76,6 +84,31 @@
 				CDFA7A6E2A5EE22C00A2E4A7 /* Walkthrough.swift */,
 			);
 			path = Walkthrough;
+			sourceTree = "<group>";
+		};
+		CDFA7A702A5EF2E200A2E4A7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CDFA7A712A5EF2F500A2E4A7 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CDFA7A732A5EF9E800A2E4A7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CDFA7A762A5F08E900A2E4A7 /* HomeHubContent */,
+				CDFA7A742A5EF9F100A2E4A7 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CDFA7A762A5F08E900A2E4A7 /* HomeHubContent */ = {
+			isa = PBXGroup;
+			children = (
+				CDFA7A772A5F08F900A2E4A7 /* HomeHubContentView.swift */,
+			);
+			path = HomeHubContent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +183,9 @@
 			files = (
 				CDFA7A6F2A5EE22C00A2E4A7 /* Walkthrough.swift in Sources */,
 				CDFA7A622A5EE1D200A2E4A7 /* ContentView.swift in Sources */,
+				CDFA7A722A5EF2F500A2E4A7 /* LoginView.swift in Sources */,
+				CDFA7A782A5F08F900A2E4A7 /* HomeHubContentView.swift in Sources */,
+				CDFA7A752A5EF9F100A2E4A7 /* HomeView.swift in Sources */,
 				CDFA7A602A5EE1D200A2E4A7 /* RestaurantUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

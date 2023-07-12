@@ -9,28 +9,39 @@ import SwiftUI
 
 struct Walkthrough: View {
     var body: some View {
-        ZStack {
-            Color.green.ignoresSafeArea()
-            VStack {
-                VStack{
-                    TabView {
-                        slider_one()
-                        slider_two()
+        NavigationView {
+            ZStack {
+                
+                
+                Color.green.ignoresSafeArea()
+                VStack {
+                    VStack{
+                        TabView {
+                            slider_one()
+                            slider_two()
+                        }
+                        .tabViewStyle(.page)
+                        .onAppear {
+                            setupAppearance()
+                        }
+                        
                     }
-                    .tabViewStyle(.page)
-                    .onAppear {
-                        setupAppearance()
+                    .frame(width: 370, height: 450)
+                    .background(Color.white)
+                    .cornerRadius(20)
+                    .shadow(color: .black.opacity(0.2), radius: 10, x:0, y: 0)
+                    
+                    NavigationLink(destination: LoginView()) {
+                        login_button()
                     }
                     
+                    NavigationLink(destination: LoginView()) {
+                        signup_button()
+                    }
+                    NavigationLink(destination: HomeView()) {
+                        skip_button()
+                    }
                 }
-                .frame(width: 370, height: 450)
-                .background(Color.white)
-                .cornerRadius(20)
-                .shadow(color: .black.opacity(0.2), radius: 10, x:0, y: 0)
-                
-                login_button()
-                signup_button()
-                skip_button()
             }
         }
     }
@@ -75,14 +86,12 @@ struct Walkthrough: View {
     }
     
     private func signup_button() -> some View {
-        Button{
-            
-        } label: {
+        VStack {
             Text("Sign Up")
                 .font(.body)
                 .fontWeight(.bold)
                 .foregroundColor(Color.black)
-               
+            
         }
         .padding()
         .frame(maxWidth: .infinity)
@@ -93,14 +102,12 @@ struct Walkthrough: View {
     }
     
     private func login_button() -> some View {
-        Button{
-            
-        } label: {
+        VStack {
             Text("Login")
                 .font(.body)
                 .fontWeight(.bold)
                 .foregroundColor(Color.white)
-               
+            
         }
         .padding()
         .frame(maxWidth: .infinity)
@@ -111,24 +118,22 @@ struct Walkthrough: View {
     }
     
     private func skip_button() -> some View {
-        Button{
-            
-        } label: {
+        VStack {
             Text("Skip")
                 .font(.body)
                 .foregroundColor(Color.black)
                 .fontWeight(.bold)
                 .underline()
-               
+            
         }
         .padding()
         .cornerRadius(25)
     }
     
     func setupAppearance() {
-         UIPageControl.appearance().currentPageIndicatorTintColor = .black
-         UIPageControl.appearance().pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.3)
-       }
+        UIPageControl.appearance().currentPageIndicatorTintColor = .black
+        UIPageControl.appearance().pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.3)
+    }
 }
 
 struct Walkthrough_Previews: PreviewProvider {
