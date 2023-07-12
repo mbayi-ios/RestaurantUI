@@ -9,18 +9,24 @@ import SwiftUI
 
 struct Walkthrough: View {
     var body: some View {
-        VStack{
-            TabView {
-                slider_one()
-                slider_two()
+        ZStack {
+            Color.green.ignoresSafeArea()
+            VStack{
+                TabView {
+                    slider_one()
+                    slider_two()
+                }
+                .tabViewStyle(.page)
+                .onAppear {
+                    setupAppearance()
+                }
+                
             }
-            .tabViewStyle(.page)
-            
+            .frame(width: 370, height: 450)
+            .background(Color.white)
+            .cornerRadius(20)
+            .shadow(color: .black.opacity(0.2), radius: 10, x:0, y: 0)
         }
-        .frame(width: 370, height: 450)
-        .background(Color.red)
-        .cornerRadius(20)
-        .shadow(color: .black.opacity(0.2), radius: 10, x:0, y: 0)
     }
     
     private func slider_one() -> some View {
@@ -28,10 +34,10 @@ struct Walkthrough: View {
             Image(systemName: "arrow.triangle.2.circlepath")
                 .resizable()
                 .scaledToFit()
-                .frame(width: 80, height: 80)
-                .foregroundColor(Color.white)
+                .frame(width: 60, height: 60)
+                .foregroundColor(Color.green)
             Text("Reordering made simple")
-                .font(.title)
+                .font(.title2)
                 .fontWeight(.bold)
                 .padding()
             
@@ -47,10 +53,10 @@ struct Walkthrough: View {
             Image(systemName: "checkmark")
                 .resizable()
                 .scaledToFit()
-                .frame(width: 80, height: 80)
-                .foregroundColor(Color.white)
+                .frame(width: 60, height: 60)
+                .foregroundColor(Color.green)
             Text("Reap the benefits")
-                .font(.title)
+                .font(.title2)
                 .fontWeight(.bold)
                 .padding()
             
@@ -61,6 +67,11 @@ struct Walkthrough: View {
             
         }
     }
+    
+    func setupAppearance() {
+         UIPageControl.appearance().currentPageIndicatorTintColor = .black
+         UIPageControl.appearance().pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.3)
+       }
 }
 
 struct Walkthrough_Previews: PreviewProvider {
