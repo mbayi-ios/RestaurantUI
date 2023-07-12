@@ -17,10 +17,10 @@ struct Walkthrough: View {
             .tabViewStyle(.page)
             
         }
-        .frame(width: 350, height: 450)
+        .frame(width: 370, height: 450)
         .background(Color.red)
         .cornerRadius(20)
-        .shadow(color: .black.opacity(0.4), radius: 10, x:0, y: 0)
+        .shadow(color: .black.opacity(0.2), radius: 10, x:0, y: 0)
     }
     
     private func slider_one() -> some View {
