@@ -15,6 +15,7 @@
 		CDFA7A722A5EF2F500A2E4A7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA7A712A5EF2F500A2E4A7 /* LoginView.swift */; };
 		CDFA7A752A5EF9F100A2E4A7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA7A742A5EF9F100A2E4A7 /* HomeView.swift */; };
 		CDFA7A782A5F08F900A2E4A7 /* HomeHubContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA7A772A5F08F900A2E4A7 /* HomeHubContentView.swift */; };
+		CDFA7A7A2A5F19F300A2E4A7 /* SingleOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA7A792A5F19F300A2E4A7 /* SingleOrderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		CDFA7A712A5EF2F500A2E4A7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CDFA7A742A5EF9F100A2E4A7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CDFA7A772A5F08F900A2E4A7 /* HomeHubContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHubContentView.swift; sourceTree = "<group>"; };
+		CDFA7A792A5F19F300A2E4A7 /* SingleOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleOrderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				CDFA7A612A5EE1D200A2E4A7 /* ContentView.swift */,
 				CDFA7A632A5EE1D300A2E4A7 /* Assets.xcassets */,
 				CDFA7A652A5EE1D300A2E4A7 /* Preview Content */,
+				CDFA7A792A5F19F300A2E4A7 /* SingleOrderView.swift */,
 			);
 			path = RestaurantUI;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDFA7A7A2A5F19F300A2E4A7 /* SingleOrderView.swift in Sources */,
 				CDFA7A6F2A5EE22C00A2E4A7 /* Walkthrough.swift in Sources */,
 				CDFA7A622A5EE1D200A2E4A7 /* ContentView.swift in Sources */,
 				CDFA7A722A5EF2F500A2E4A7 /* LoginView.swift in Sources */,

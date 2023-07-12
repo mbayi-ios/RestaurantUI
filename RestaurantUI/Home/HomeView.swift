@@ -9,46 +9,47 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        VStack {
-            HStack {
-                Text("Hi, Brittany!")
-                    .font(.title)
-                    .fontWeight(.bold)
+        NavigationView{
+            VStack {
+                HStack {
+                    Text("Hi, Brittany!")
+                        .font(.title)
+                        .fontWeight(.bold)
+                    
+                    Spacer()
+                    Image(systemName: "cart.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30, height: 30)
+                }
+                .padding()
                 
-                Spacer()
-                Image(systemName: "cart.fill")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 30, height: 30)
+                ScrollView {
+                    banner()
+                    
+                    HStack {
+                        Text("Rewards")
+                            .font(.system(size: 20))
+                            .fontWeight(.bold)
+                    }
+                    VStack {
+                    
+                        HomeHubContentView()
+                        HomeHubContentView()
+                    }
+                    .padding()
+                
+                }
+                
             }
-            .padding()
-            
-            banner()
-           
-            HStack {
-                Text("Past Orders")
-                    .font(.title)
-                    .fontWeight(.bold)
-            
-            }
-            
-            HStack {
-                Text("Rewards")
-                    .font(.title)
-                    .fontWeight(.bold)
-            }
-            
-            HomeHubContentView()
-                .padding(.horizontal, 10)
-            
         }
-       
+        
     }
     private func banner() -> some View {
         HStack {
             Text("X2")
-               .font(.title2)
-               .fontWeight(.bold)
+                .font(.title2)
+                .fontWeight(.bold)
                 .frame(width: 60, height: 60)
                 .background(Color.red)
                 .cornerRadius(50)
