@@ -27,17 +27,26 @@ struct HomeView: View {
                 ScrollView {
                     banner()
                     
-                    HStack {
-                        Text("Rewards")
-                            .font(.system(size: 20))
+                        Text("Past Order")
+                            .font(.system(size: 18))
                             .fontWeight(.bold)
-                    }
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.horizontal, 12)
+                    
                     VStack {
-                    SingleOrderView()
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack {
+                                ForEach(0..<5){_ in
+                                    SingleOrderView()
+                                }
+                            }
+                            .padding(.bottom, 20)
+                            
+                        }
                         HomeHubContentView()
                         HomeHubContentView()
                     }
-                    .padding()
+                    .padding(.horizontal, 10)
                 
                 }
                 
@@ -51,10 +60,11 @@ struct HomeView: View {
                 .font(.title2)
                 .fontWeight(.bold)
                 .frame(width: 60, height: 60)
-                .background(Color.red)
+                .background(Color.green)
                 .cornerRadius(50)
             Spacer()
             Text("Earn 2 points for every dollar toward free juice, pastries, merch and more!")
+                .font(.system(size: 16))
                 .frame(width: 220, height: 80)
                 .fontWeight(.bold)
             Spacer()
@@ -65,8 +75,9 @@ struct HomeView: View {
                 .padding(.bottom, 60)
         }
         .padding()
-        .background(Color.green)
-        .cornerRadius(20)
+        .frame(width:380, height: 100)
+        .background(Color.green.opacity(0.4))
+        .cornerRadius(15)
         .padding(.horizontal, 10)
     }
     
