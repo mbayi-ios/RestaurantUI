@@ -11,6 +11,7 @@
 		CDFA7A622A5EE1D200A2E4A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA7A612A5EE1D200A2E4A7 /* ContentView.swift */; };
 		CDFA7A642A5EE1D300A2E4A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDFA7A632A5EE1D300A2E4A7 /* Assets.xcassets */; };
 		CDFA7A672A5EE1D300A2E4A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDFA7A662A5EE1D300A2E4A7 /* Preview Assets.xcassets */; };
+		CDFA7A6F2A5EE22C00A2E4A7 /* Walkthrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA7A6E2A5EE22C00A2E4A7 /* Walkthrough.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		CDFA7A612A5EE1D200A2E4A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CDFA7A632A5EE1D300A2E4A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDFA7A662A5EE1D300A2E4A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CDFA7A6E2A5EE22C00A2E4A7 /* Walkthrough.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walkthrough.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		CDFA7A5E2A5EE1D200A2E4A7 /* RestaurantUI */ = {
 			isa = PBXGroup;
 			children = (
+				CDFA7A6D2A5EE21B00A2E4A7 /* Walkthrough */,
 				CDFA7A5F2A5EE1D200A2E4A7 /* RestaurantUIApp.swift */,
 				CDFA7A612A5EE1D200A2E4A7 /* ContentView.swift */,
 				CDFA7A632A5EE1D300A2E4A7 /* Assets.xcassets */,
@@ -65,6 +68,14 @@
 				CDFA7A662A5EE1D300A2E4A7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CDFA7A6D2A5EE21B00A2E4A7 /* Walkthrough */ = {
+			isa = PBXGroup;
+			children = (
+				CDFA7A6E2A5EE22C00A2E4A7 /* Walkthrough.swift */,
+			);
+			path = Walkthrough;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDFA7A6F2A5EE22C00A2E4A7 /* Walkthrough.swift in Sources */,
 				CDFA7A622A5EE1D200A2E4A7 /* ContentView.swift in Sources */,
 				CDFA7A602A5EE1D200A2E4A7 /* RestaurantUIApp.swift in Sources */,
 			);
