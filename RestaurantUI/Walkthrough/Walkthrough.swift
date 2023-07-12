@@ -11,21 +11,27 @@ struct Walkthrough: View {
     var body: some View {
         ZStack {
             Color.green.ignoresSafeArea()
-            VStack{
-                TabView {
-                    slider_one()
-                    slider_two()
+            VStack {
+                VStack{
+                    TabView {
+                        slider_one()
+                        slider_two()
+                    }
+                    .tabViewStyle(.page)
+                    .onAppear {
+                        setupAppearance()
+                    }
+                    
                 }
-                .tabViewStyle(.page)
-                .onAppear {
-                    setupAppearance()
-                }
+                .frame(width: 370, height: 450)
+                .background(Color.white)
+                .cornerRadius(20)
+                .shadow(color: .black.opacity(0.2), radius: 10, x:0, y: 0)
                 
+                login_button()
+                signup_button()
+                skip_button()
             }
-            .frame(width: 370, height: 450)
-            .background(Color.white)
-            .cornerRadius(20)
-            .shadow(color: .black.opacity(0.2), radius: 10, x:0, y: 0)
         }
     }
     
@@ -66,6 +72,57 @@ struct Walkthrough: View {
                 .padding()
             
         }
+    }
+    
+    private func signup_button() -> some View {
+        Button{
+            
+        } label: {
+            Text("Sign Up")
+                .font(.body)
+                .fontWeight(.bold)
+                .foregroundColor(Color.black)
+               
+        }
+        .padding()
+        .frame(maxWidth: .infinity)
+        .background(Color.white)
+        .cornerRadius(25)
+        .padding(.horizontal,10)
+        .padding(.top, 5)
+    }
+    
+    private func login_button() -> some View {
+        Button{
+            
+        } label: {
+            Text("Login")
+                .font(.body)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
+               
+        }
+        .padding()
+        .frame(maxWidth: .infinity)
+        .background(Color.black)
+        .cornerRadius(25)
+        .padding(.horizontal,10)
+        .padding(.top, 30)
+    }
+    
+    private func skip_button() -> some View {
+        Button{
+            
+        } label: {
+            Text("Skip")
+                .font(.body)
+                .foregroundColor(Color.black)
+                .fontWeight(.bold)
+                .underline()
+               
+        }
+        .padding()
+        .cornerRadius(25)
     }
     
     func setupAppearance() {
