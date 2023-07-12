@@ -33,7 +33,7 @@ struct HomeView: View {
                             .fontWeight(.bold)
                     }
                     VStack {
-                    
+                    SingleOrderView()
                         HomeHubContentView()
                         HomeHubContentView()
                     }
